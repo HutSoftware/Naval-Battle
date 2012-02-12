@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="app_name">Batalha Naval
-</string>
+    <string name="app_name">Batalha Naval</string>
     <string name="Obrigado">Obrigado por jogar!</string>
+    <string name="str_setbarcos">Position your boats</string>
+    <string name="str_changeorietation">Change boat orietation</string>
+    <string name="str_error1">The boat should be positioned inside the field!</string>
+    <string name="str_error2">A boat can not be placed over the other.</string>
+    <string name="str_startgame">Start the game</string>
+    <string name="str_boardopponent">Opponent field:</string>
+    <string name="str_yourboard">Your field:</string>
+    <string name="str_youlose">You lose :(  Try again... \n</string>
+    <string name="str_about">Developed by:\nLuciano Pádua Sabença\nFábio Takahashi Tanniguchi\n Fernando H.S. Gonçalves\n Jean Lucas Tuchapski\nPedro Gabriel Naponoceno</string>
+    <string name="str_endgame">End game.</string>
+    <string name="str_itsnotyourturn">Its NOT your turn!</string>
+    <string name="str_youwin">You win! Congratulation!\n</string>
+    <string name="str_startingbluetooth">Turning On Bluetooth!</string>
+    <string name="str_shutdownbluetooth">Turning Off Bluetooth!</string>
+    <string name="str_bluetoothoff">Bluetooth Off!</string>
+    <string name="str_error3">Ocorred an error! Please restart the app!</string>
+    <string name="str_nobluettoth">No Bluetooth!</string>
+    <string name="str_connectiondone">Connection done with succesfull</string>
+    <string name="str_genericerror">Error! Sorry! :(  Please restart the app!.</string>
+    <string-array name="str_boats">
+        <item >cruisers</item>
+        <item >armor-plated</item>
+        <item >frigate</item>
+        <item >Aircraft carrier</item>
+        <item >submarine</item>
+    </string-array>
 </resources>

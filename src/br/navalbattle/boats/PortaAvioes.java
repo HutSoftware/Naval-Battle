@@ -20,7 +20,9 @@
  * @author:Pedro Gabriel Naponoceno
 */
 	
-package br.TesteCampo;
+package br.navalbattle.boats;
+
+import br.navalbattle.resources.R;
 
 public class PortaAvioes extends Barco{
 

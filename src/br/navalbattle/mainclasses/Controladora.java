@@ -20,7 +20,7 @@
  * @author:Luciano Padua Sabenca
 */
 	
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
 import java.io.*;
 
@@ -34,6 +34,30 @@ public class Controladora extends Application {
 	
 	boolean acabouJogo = false;
 	
+	public OutputStream getSaida() {
+		return saida;
+	}
+
+	public void setSaida(OutputStream saida) {
+		this.saida = saida;
+	}
+
+	public InputStream getEntrada() {
+		return entrada;
+	}
+
+	public void setEntrada(InputStream entrada) {
+		this.entrada = entrada;
+	}
+
+	public boolean isAcabouJogo() {
+		return acabouJogo;
+	}
+
+	public void setAcabouJogo(boolean acabouJogo) {
+		this.acabouJogo = acabouJogo;
+	}
+
 	public void finalizarJogo()
 	{
 	

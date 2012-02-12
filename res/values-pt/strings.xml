@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Batalha Naval
+</string>
+    <string name="Obrigado">Obrigado por jogar!</string>
+    <string name="str_setbarcos">Posicione seus barcos</string>
+    <string name="str_changeorietation">Mudar sentido do barco</string>
+    <string name="str_error1">O navio tem que ser colocado sobre o campo</string>
+    <string name="str_error2">Um navio não pode ser colocado sobre o outro.</string>
+    <string name="str_startgame">Começar o jogo</string>
+    <string name="str_boardopponent">Tabela do adversario: </string>
+    <string name="str_yourboard">Seu tabuleiro: </string>
+    <string name="str_youlose">Você perdeu :(  ,tente de novo depois! \n</string>
+    <string name="str_about">Desenvolvido por:\nLuciano Pádua Sabença\nFábio Takahashi Tanniguchi\n Fernando H.S. Gonçalves\n Jean Lucas Tuchapski\nPedro Gabriel Naponoceno</string>
+    <string name="str_endgame">Finalizar jogo.</string>
+    <string name="str_itsnotyourturn">Não é a sua vez!</string>
+    <string name="str_youwin">Você ganhou ! Parabéns!\n</string>
+    <string name="str_startingbluetooth">Bluetooth Ligando!</string>
+    <string name="str_shutdownbluetooth">Bluetooth Desligando!</string>
+    <string name="str_bluetoothoff">Bluetooth Desligado!</string>
+    <string name="str_error3">Ocorreu um erro! Por favor, reinicie o app!</string>
+    <string name="str_nobluettoth">Não existe Bluetooth!</string>
+    <string name="str_connectiondone">Conexão feita com sucesso!</string>
+    <string name="str_genericerror">Erro!  Por favor reinicie o aplicativo...</string>
+</resources>

@@ -26,8 +26,15 @@
  * @author:Luciano Padua Sabença
  */
 
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
+import br.navalbattle.boats.Barco;
+import br.navalbattle.boats.CacaMinas;
+import br.navalbattle.boats.Encouracado;
+import br.navalbattle.boats.Fragata;
+import br.navalbattle.boats.PortaAvioes;
+import br.navalbattle.boats.Submarino;
+import br.navalbattle.resources.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -74,7 +81,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 	
 	String []vetBarcos = new String[]
     {"CacaMinas","Encouracado","Fragata","Porta-aviões","Submarino"};
-	
+	//this.getResources().getStringArray(R.array.str_boats);
 	char indiceBarco;
 
 
@@ -87,7 +94,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
         layoutPrincipal = new TableLayout(this);
         
         TextView texto1 = new TextView(this);
-        texto1.setText("Posicione seus barcos: ");
+        texto1.setText(R.string.str_setbarcos);
         
         layoutPrincipal.addView(texto1);
         layout = new TableLayout(this);
@@ -164,6 +171,8 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int pos, long arg3) {
+				//TODO arg0.getAdapter().getItem() => Com base nisso é possivel extrair o item e então eu comparo no if pra checar qual o tipo do barco :D
+				//((String)arg0.getAdapter().getItem(pos)).index
 				if (pos > -1 && pos < arg0.getCount())
 				{
 					indiceBarco = vetBarcos[pos].toUpperCase().charAt(0);
@@ -195,7 +204,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 			}
 		});
 		
-		btnMudarSentido.setText("Mudar sentido do barco");
+		btnMudarSentido.setText(R.string.str_changeorietation);
 		linha.addView(btnMudarSentido);
 		layoutPrincipal.addView(linha);
 		scroll.addView(layoutPrincipal);
@@ -269,7 +278,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 				barco = null;
 
 				AlertDialog.Builder dialogo = new AlertDialog.Builder(PosicionamentoDosNavios.this);
-				dialogo.setMessage("O navio tem que ser colocado sobre o campo.");
+				dialogo.setMessage(R.string.str_error1);
 				dialogo.setNeutralButton("OK!", new DialogInterface.OnClickListener() {
 					
 					@Override
@@ -343,7 +352,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 			if(!podeColocar)
 			{
 				AlertDialog.Builder dialogo = new AlertDialog.Builder(PosicionamentoDosNavios.this);
-				dialogo.setMessage("O navio tem que ser colocado sobre o campo.");
+				dialogo.setMessage(R.string.str_error1);
 				dialogo.setNeutralButton("OK!", new DialogInterface.OnClickListener() {
 					
 					@Override
@@ -362,7 +371,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 						podeColocar = false;
 						
 						AlertDialog.Builder dialogo = new AlertDialog.Builder(PosicionamentoDosNavios.this);
-						dialogo.setMessage("Um navio não pode ser colocado sobre outro.");
+						dialogo.setMessage(R.string.str_error2);
 						dialogo.setNeutralButton("OK!", new DialogInterface.OnClickListener() {
 							
 							@Override
@@ -405,7 +414,7 @@ public class PosicionamentoDosNavios extends Activity implements View.OnTouchLis
 				{
 					barcos.setVisibility(View.INVISIBLE);
 					
-					btnMudarSentido.setText("Começar jogo");
+					btnMudarSentido.setText(R.string.str_startgame);
 					btnMudarSentido.setOnClickListener(new View.OnClickListener() {
 						
 						@Override

@@ -24,7 +24,7 @@
  * 
  * @author:Luciano Padua Sabenca
  */
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
 public class Coordenadas {
 	

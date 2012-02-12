@@ -23,8 +23,9 @@
  *
  *  @author:Luciano Padua Sabença
  */
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
+import br.navalbattle.resources.R;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;

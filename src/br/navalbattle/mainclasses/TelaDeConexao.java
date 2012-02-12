@@ -28,12 +28,14 @@
  * @author:Luciano Padua Sabença
  * 
  */
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
+
+import br.navalbattle.resources.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -84,22 +86,19 @@ public class TelaDeConexao extends Activity implements AdapterView.OnItemClickLi
 			int state = intent.getIntExtra(stateExtra, -1);
 			int previousState = intent.getIntExtra(prevStateExtra, -1);
 			
-			String tt = "";
+			
 			switch(state)
 			{
-				case (BluetoothAdapter.STATE_TURNING_ON):{tt = "Bluetooth Ligando!";break;}
 				case (BluetoothAdapter.STATE_ON):
 				{
-					tt = "Bluetooth Ligado!";
+			
 					unregisterReceiver(this);
 					listarDispositivos();
 					bluetoothServer.start();
 					break;
 					
 				}
-				case (BluetoothAdapter.STATE_TURNING_OFF):{tt = "Bluetooth Desligando!";break;}
-				case (BluetoothAdapter.STATE_OFF):{tt = "Bluetooth Desligado!";break;}
-				default : break;
+				
 			}
 		}
 		
@@ -209,7 +208,7 @@ public class TelaDeConexao extends Activity implements AdapterView.OnItemClickLi
 						 
 						
 					} catch (Exception e) {
-						Toast.makeText(TelaDeConexao.this, "Ocorreu um erro. Por favor, reinicie o app!", Toast.LENGTH_LONG).show();
+						Toast.makeText(TelaDeConexao.this, R.string.str_error3, Toast.LENGTH_LONG).show();
 					}
 				}
         	
@@ -222,7 +221,7 @@ public class TelaDeConexao extends Activity implements AdapterView.OnItemClickLi
         
         if (bluetooth == null) 
         {
-        	Toast.makeText(this, "Não existe Bluetooth", Toast.LENGTH_LONG).show();
+        	Toast.makeText(this, R.string.str_nobluettoth, Toast.LENGTH_LONG).show();
         }
         else //existe bluetooth
         {
@@ -297,8 +296,8 @@ public class TelaDeConexao extends Activity implements AdapterView.OnItemClickLi
     	 AlertDialog.Builder ad = new AlertDialog.Builder(TelaDeConexao.this);
 		 
     	 
-		 ad.setTitle("Conexaõ feita com sucesso!");
-		 ad.setMessage("Conexão feita com sucesso!");
+		 ad.setTitle(R.string.str_connectiondone);
+		 ad.setMessage(R.string.str_connectiondone);
 		 ad.setPositiveButton("OK!", new OnClickListener()
 		 {
 
@@ -340,7 +339,7 @@ public class TelaDeConexao extends Activity implements AdapterView.OnItemClickLi
 			    	 } 
 			    	 catch (IOException e) 
 			    	 {
-			    		 Toast.makeText(TelaDeConexao.this, "Erro ao conectar com o dispositivo "+device.getName(), Toast.LENGTH_LONG).show();
+			    		 Toast.makeText(TelaDeConexao.this, R.string.str_genericerror, Toast.LENGTH_LONG).show();
 					 }			
 			     }
 			 }

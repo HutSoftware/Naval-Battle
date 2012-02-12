@@ -26,11 +26,13 @@
  * @author:Luciano Padua Sabença
  * 
  */
-package br.TesteCampo;
+package br.navalbattle.mainclasses;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import br.navalbattle.resources.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -109,9 +111,9 @@ public class Principal extends Activity implements View.OnClickListener{
         TableRow linhaTextos = new TableRow(this);
         linhaTextos.addView(texto1);
         linhaTextos.addView(texto2);
-        texto1.setText("Tabuleiro do adversario: ");
+        texto1.setText(R.string.str_boardopponent);
         texto1.setWidth(widthTela);
-        texto2.setText("Seu tabuleiro: ");
+        texto2.setText(R.string.str_yourboard);
         layoutPrincipal.addView(linhaTextos);
         
         
@@ -357,10 +359,8 @@ public class Principal extends Activity implements View.OnClickListener{
 										@Override
 										public void run() {
 											AlertDialog.Builder alerta = new AlertDialog.Builder(Principal.this);
-											alerta.setMessage("Você ganhou, parabéns!\n\nDesenvolvido por:\nLuciano Pádua Sabença\n" +
-													"Fábio Takahashi Tanniguchi\nFernando HS Gonçalves\nJean Lucas Tuchapski"+
-													"\nPedro Gabriel Naponoceno");
-											alerta.setPositiveButton("Finalizar jogo",new OnClickListener(){
+											alerta.setMessage(R.string.str_youwin + R.string.str_about);
+											alerta.setPositiveButton(R.string.str_endgame,new OnClickListener(){
 
 												@Override
 												public void onClick(DialogInterface arg0,int arg1) {
@@ -380,10 +380,8 @@ public class Principal extends Activity implements View.OnClickListener{
 									@Override
 									public void run() {
 										AlertDialog.Builder alerta = new AlertDialog.Builder(Principal.this);
-										alerta.setMessage("Você perdeu :( ,tente de novo depois!\n\nDesenvolvido por:\nLuciano Pádua Sabença\n" +
-												"Fábio Takahashi Tanniguchi\nFernando H.S. Gonçalves\nJean Lucas Tuchapski"+
-												"\nPedro Gabriel Naponoceno");
-										alerta.setPositiveButton("Finalizar jogo",new OnClickListener(){
+										alerta.setMessage(R.string.str_youlose+R.string.str_about);
+										alerta.setPositiveButton(R.string.str_endgame ,new OnClickListener(){
 
 											@Override
 											public void onClick(DialogInterface arg0,int arg1) 
@@ -522,7 +520,7 @@ public class Principal extends Activity implements View.OnClickListener{
 		
 		}
 		else
-			Toast.makeText(Principal.this, "Não é sua vez!", Toast.LENGTH_LONG).show();
+			Toast.makeText(Principal.this, R.string.str_itsnotyourturn, Toast.LENGTH_LONG).show();
 	    
 		
 	}

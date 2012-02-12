@@ -19,47 +19,58 @@
 
 	 * @author:Pedro Gabriel Naponoceno
 */
+package br.navalbattle.boats;
+
+import br.navalbattle.resources.R;
+
+public class Encouracado extends Barco{
+
+
 		
-package br.TesteCampo;
 
-public class Submarino extends Barco{
-
-
-	public Submarino(int x1,int y1, boolean direcao)
+	public Encouracado(int x1,int y1, boolean direcao)
 	{
 		super(x1, y1, direcao);
 	}	
 	
 	public int[][] getPosicoesOcupadas()
 	{
-		int[][] ret = new int[3][3];
+		int[][] ret = new int[4][3];
 		if(direcaoPadrao)
 		{					
 			ret[0][0] = xCentral - 1;
 			ret[0][1] = yCentral;			
-			ret[0][2] = R.drawable.submarino_ver_0;  
+			ret[0][2] = R.drawable.encouracado_ver_0;  
 			
 			ret[1][0] = xCentral;
 			ret[1][1] = yCentral;			
-			ret[1][2] = R.drawable.submarino_ver_1;  
+			ret[1][2] = R.drawable.encouracado_ver_1;
 			
 			ret[2][0] = xCentral + 1;
 			ret[2][1] = yCentral;
-			ret[2][2] = R.drawable.submarino_ver_2;  
+			ret[2][2] = R.drawable.encouracado_ver_2; 
+			
+			ret[3][0] = xCentral + 2;
+			ret[3][1] = yCentral;
+			ret[3][2] = R.drawable.encouracado_ver_3; 
 		}
 		else
 		{			
 			ret[0][0] = xCentral;
 			ret[0][1] = yCentral - 1;
-			ret[0][2] = R.drawable.submarino_hor_0;  
-						
+			ret[0][2] = R.drawable.encouracado_hor_0;
+			
 			ret[1][0] = xCentral;
 			ret[1][1] = yCentral;
-			ret[1][2] = R.drawable.submarino_hor_1;  
-				
+			ret[1][2] = R.drawable.encouracado_hor_1;
+			
 			ret[2][0] = xCentral;
 			ret[2][1] = yCentral + 1;
-			ret[2][2] = R.drawable.submarino_hor_2;  
+			ret[2][2] = R.drawable.encouracado_hor_2;
+			
+			ret[3][0] = xCentral;
+			ret[3][1] = yCentral + 2;
+			ret[3][2] = R.drawable.encouracado_hor_3;
 		}
 		
 		return ret;			

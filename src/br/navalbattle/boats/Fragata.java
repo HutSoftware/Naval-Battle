@@ -26,7 +26,9 @@
  * @author:Luciano Padua Sabença
  */
 
-package br.TesteCampo;
+package br.navalbattle.boats;
+
+import br.navalbattle.resources.R;
 
 public class Fragata extends Barco{
 
